@@ -1,39 +1,626 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-      <nav class="header__right">
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 0</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 1</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 2</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 3</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="main_content">
-    <div class="container_center">
-      <div class="grid">
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>САФМЕД Стоматология</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.5"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="navbar__toggle"></div>
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="САФМЕД Стоматология"/></a></div>
+        <div class="header__right">
+          <div class="action">
+            <div class="action__item">
+              <div class="action__icon"><i class="icon-calendar"></i></div>
+              <div class="action__descr">
+                <div class="action__title">Режим работы:</div>
+                <div class="action__props">Круглочуточно. Без выходных.</div>
+              </div>
+            </div>
+            <div class="action__item">
+              <div class="action__icon"><i class="icon-marker"></i></div>
+              <div class="action__descr">
+                <div class="action__title">Адрес:</div>
+                <div class="action__props">г. Москва, ул.Ягодная 6</div>
+              </div>
+            </div>
+            <div class="action__item"><a class="action__icon" href="mailto: primer.med@mail.ru"><i class="icon-mail"></i></a>
+              <div class="action__descr">
+                <div class="action__title">Почта:</div><a class="action__props" href="mailto: primer.med@mail.ru">primer.med@mail.ru</a>
+              </div>
+            </div>
+            <div class="action__item"><a class="action__icon" href="tel: +7 (495) 111-57-57"><i class="icon-phone"></i></a>
+              <div class="action__descr"><a class="action__phone" href="tel: +7 (495) 111-57-57">+7(495) 111-57-57</a><a class="action__phone" href="tel: +7(909) 672-57-57">+7(909) 672-57-57</a></div>
+            </div>
+          </div>
+          <nav class="nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="#home" data-scroll-to="">Главная</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#about" data-scroll-to="">О клинике </a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#service" data-scroll-to="">Услуги</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#compare" data-scroll-to="">До и После </a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#doctors" data-scroll-to="">Доктора</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#review" data-scroll-to="">Отзывы</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#contacts" data-scroll-to="">Контакты</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="#sitemap" data-scroll-to="">Карта сайта</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container_center">
-      <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="main_content">
+      <!-- begin home-->
+      <section class="home section" id="home">
+        <div class="home__content">
+          <div class="home__form">
+            <h1 class="section__title">Проверка зубов бесплатно. Лучшие стоматологи</h1>
+            <div class="section__text">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию.</div>
+            <form class="form" action="send.php">
+              <input type="hidden" name="subject" value="Заявка с сайта"/>
+              <div class="form__label">Ваш телефон</div>
+              <div class="form__row form_inline">
+                <input type="tel" name="tel" placeholder="+7 (___) ___ - __- __" required="required"/>
+                <button class="btn" type="submit">Записаться на прием</button>
+              </div>
+              <label class="form__privacy">
+                <input type="checkbox" checked=""/>Я принимаю условия передачи информации
+              </label>
+              <div class="form__rezult" data-message="Спасибо! В ближайшее время с вами свяжутся наши специалисты."></div>
+            </form>
+          </div>
+          <div class="home__img"><img src="img/doctor.png" alt=""/></div>
+        </div>
+      </section>
+      <!-- end home-->
+      <!-- begin about-->
+      <section class="about section" id="about">
+        <div class="container_center">
+          <div class="about__content">
+            <div class="about__logo"><img src="img/logo-gray.svg" alt=""/></div>
+            <div class="about__img"><img src="img/about.png" alt=""/></div>
+            <div class="about__descr">
+              <h2 class="section__title">О нас</h2>
+              <div class="section__text"> 
+                <p>Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным, случайно модифицирует периодический азид ртути.</p>
+                <p>Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. </p>
+              </div>
+              <div class="about__quote">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end about-->
+      <!-- begin service-->
+      <section class="service section" id="service">
+        <div class="container_center">
+          <h2 class="section__title" data-title="Услуги">Услуги</h2>
+          <div class="section__text">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию.</div>
+          <div class="service__list">
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Имплантация зубов</div>
+                  <div class="service__price">от 29 900 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/implant.svg" alt="Имплантация зубов"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога;</li>
+                  <li>ортопанорамный снимок;</li>
+                  <li>анестезия современными обезболивающими препаратами;</li>
+                  <li>операция по установке имплантата;</li>
+                  <li>установка заглушки;</li>
+                  <li>установка формирователя десны;</li>
+                  <li>установка абатмента;</li>
+                  <li>снятие слепков;</li>
+                  <li>изготовление и установка металлокерамической коронки </li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Съемный протез</div>
+                  <div class="service__price">10 000 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/proyez.svg" alt="Съемный протез"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-ортопеда;</li>
+                  <li>снятие слепков,</li>
+                  <li>индивидуальная ложка;</li>
+                  <li>изготовление протеза - акрил производство Германия,</li>
+                  <li>установка и подгонка протеза ;</li>
+                  <li>серия профилактических осмотров.</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Удаление зубов</div>
+                  <div class="service__price">1 500 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/tools.svg" alt="Удаление зубов"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога;</li>
+                  <li>обезболивание;</li>
+                  <li>хирургические манипуляции по удалению зуба ;</li>
+                  <li>заживления и дезинфекции лунки;</li>
+                  <li>наложение швов по показаниям;</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Виниры</div>
+                  <div class="service__price">9 000 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/dent-full.svg" alt="Виниры"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>ортопанорамный или прицельный снимок (определяется врачом по показаням);</li>
+                  <li>анестезия современными обезболивающими препаратами - если необходимо;</li>
+                  <li>снятие слепков или внутриротовое сканирование;</li>
+                  <li>подготовка зубов под установку;</li>
+                  <li>установка и подгонка;</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Чистка и отбеливание</div>
+                  <div class="service__price">1 500 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/dent-clean.svg" alt="Чистка и отбеливание"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>диагностика полости рта;</li>
+                  <li>консультация врача-терапевта;</li>
+                  <li>удаление зубных отложений ультразвуком;</li>
+                  <li>снятие зубного налета при помощи AirFlow;</li>
+                  <li>полировка и заключительное очищение профессиональной пастой;</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Циркониевая коронка</div>
+                  <div class="service__price">9 000 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/dent-crown.svg" alt="Циркониевая коронка"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога-ортопеда;</li>
+                  <li>анестезия современными обезболивающими препаратами;</li>
+                  <li>препарирование зуба под коронку;</li>
+                  <li>снятие слепков или скан полости рта (по назначению врача);</li>
+                  <li>установка и подгонка коронки;</li>
+                  <li>профилактические осмотры и коррекция</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Металлокерамика</div>
+                  <div class="service__price">10 000 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/metalceramic.svg" alt="Металлокерамика"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога;</li>
+                  <li>анестезия современными обезболивающими препаратами;</li>
+                  <li>изготовление коронки;</li>
+                  <li>обточка зуба под коронку;</li>
+                  <li>установка и подгонка коронки;</li>
+                  <li>профилактические осмотры и коррекция при необходимости.</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Лечение кариеса</div>
+                  <div class="service__price">1 500 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/dent-brooken.svg" alt="Лечение кариеса"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога;</li>
+                  <li>прицельный снимок;</li>
+                  <li>анестезия современными обезболивающими препаратами;</li>
+                  <li>удаление кариозных поражений для начального кариеса БЕЗ БОРМАШИНЫ, для - среднего и глубокого применение лазера или алмазного бора;</li>
+                  <li>обеззараживание полости;</li>
+                  <li>установка светокомпозитной пломбы;</li>
+                  <li>профилактические осмотры;</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__top">
+                <div class="service__head">
+                  <div class="service__name">Квадротти</div>
+                  <div class="service__price">9 000 ₽</div>
+                </div>
+                <div class="service__icon"><img src="img/cvadotty.svg" alt="Квадротти"/></div>
+              </div>
+              <div class="service__descr"><b>Что входит в стоимость:</b>
+                <ul>
+                  <li>консультация у врача-стоматолога-ортопеда;</li>
+                  <li>анестезия современными обезболивающими препаратами;</li>
+                  <li>препарирование зуба под коронку;</li>
+                  <li>снятие слепков или скан полости рта (по назначению врача);</li>
+                  <li>установка и подгонка коронки;</li>
+                  <li>профилактические осмотры и коррекция</li>
+                </ul>
+              </div>
+              <div class="service__action">
+                <button class="btn" type="button">Записаться </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end service-->
+      <!-- begin compare-->
+      <section class="compare section" id="compare">
+        <div class="container_center">
+          <h2 class="section__title" data-title="До и после">До и после</h2>
+          <div class="compare__slider">
+            <!-- Slide-->
+            <div class="compare__item">
+              <div class="compare__img"><img src="img/before.jpg" alt=""/><img src="img/after.jpg" alt=""/></div>
+              <div class="compare__descr">
+                <div class="compare__title">Орбиталь зависима. Амальгама проникает ионообменник.Орбиталь зависима</div>
+                <div class="compare__text">Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным</div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Паталогии: </div>
+                  <div class="compare__diagnoseProps">Скученность зубов</div>
+                </div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Направление: </div>
+                  <div class="compare__diagnoseProps">Исправление прикуса</div>
+                </div>
+                <div class="compare__info">
+                  <div class="compare__doc">
+                    <div class="compare__photo"><img src="img/photo.png" alt=""/></div>
+                    <div class="compare__name">
+                      <div class="compare__fio">Иванова Мария</div>
+                      <div class="compare__prof">Врач ортодонт</div>
+                    </div>
+                  </div>
+                  <div class="compare__action"><a class="btn" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="compare__item">
+              <div class="compare__img"><img src="img/before.jpg" alt=""/><img src="img/after.jpg" alt=""/></div>
+              <div class="compare__descr">
+                <div class="compare__title">Орбиталь зависима. Амальгама проникает ионообменник.Орбиталь зависима</div>
+                <div class="compare__text">Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным</div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Паталогии: </div>
+                  <div class="compare__diagnoseProps">Скученность зубов</div>
+                </div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Направление: </div>
+                  <div class="compare__diagnoseProps">Исправление прикуса</div>
+                </div>
+                <div class="compare__info">
+                  <div class="compare__doc">
+                    <div class="compare__photo"><img src="img/photo.png" alt=""/></div>
+                    <div class="compare__name">
+                      <div class="compare__fio">Иванова Мария</div>
+                      <div class="compare__prof">Врач ортодонт</div>
+                    </div>
+                  </div>
+                  <div class="compare__action"><a class="btn" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="compare__item">
+              <div class="compare__img"><img src="img/before.jpg" alt=""/><img src="img/after.jpg" alt=""/></div>
+              <div class="compare__descr">
+                <div class="compare__title">Орбиталь зависима. Амальгама проникает ионообменник.Орбиталь зависима</div>
+                <div class="compare__text">Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным</div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Паталогии: </div>
+                  <div class="compare__diagnoseProps">Скученность зубов</div>
+                </div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Направление: </div>
+                  <div class="compare__diagnoseProps">Исправление прикуса</div>
+                </div>
+                <div class="compare__info">
+                  <div class="compare__doc">
+                    <div class="compare__photo"><img src="img/photo.png" alt=""/></div>
+                    <div class="compare__name">
+                      <div class="compare__fio">Иванова Мария</div>
+                      <div class="compare__prof">Врач ортодонт</div>
+                    </div>
+                  </div>
+                  <div class="compare__action"><a class="btn" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="compare__item">
+              <div class="compare__img"><img src="img/before.jpg" alt=""/><img src="img/after.jpg" alt=""/></div>
+              <div class="compare__descr">
+                <div class="compare__title">Орбиталь зависима. Амальгама проникает ионообменник.Орбиталь зависима</div>
+                <div class="compare__text">Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным</div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Паталогии: </div>
+                  <div class="compare__diagnoseProps">Скученность зубов</div>
+                </div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Направление: </div>
+                  <div class="compare__diagnoseProps">Исправление прикуса</div>
+                </div>
+                <div class="compare__info">
+                  <div class="compare__doc">
+                    <div class="compare__photo"><img src="img/photo.png" alt=""/></div>
+                    <div class="compare__name">
+                      <div class="compare__fio">Иванова Мария</div>
+                      <div class="compare__prof">Врач ортодонт</div>
+                    </div>
+                  </div>
+                  <div class="compare__action"><a class="btn" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="compare__item">
+              <div class="compare__img"><img src="img/before.jpg" alt=""/><img src="img/after.jpg" alt=""/></div>
+              <div class="compare__descr">
+                <div class="compare__title">Орбиталь зависима. Амальгама проникает ионообменник.Орбиталь зависима</div>
+                <div class="compare__text">Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель, что вызывает дезактивацию. Согласно выдвинутой гипотезе, пламя возбуждает квантовый катализатор. Свойство, как бы это ни казалось симбиотичным</div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Паталогии: </div>
+                  <div class="compare__diagnoseProps">Скученность зубов</div>
+                </div>
+                <div class="compare__diagnose">
+                  <div class="compare__diagnoseLabel">Направление: </div>
+                  <div class="compare__diagnoseProps">Исправление прикуса</div>
+                </div>
+                <div class="compare__info">
+                  <div class="compare__doc">
+                    <div class="compare__photo"><img src="img/photo.png" alt=""/></div>
+                    <div class="compare__name">
+                      <div class="compare__fio">Иванова Мария</div>
+                      <div class="compare__prof">Врач ортодонт</div>
+                    </div>
+                  </div>
+                  <div class="compare__action"><a class="btn" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end compare-->
+      <!-- begin doctors-->
+      <section class="doctors section" id="doctors">
+        <div class="container_center">
+          <h2 class="section__title" data-title="Врачи">Врачи</h2>
+          <div class="doctors__list">
+            <div class="doctors__item">
+              <div class="doctors__img"><img src="img/doc-1.png" alt=""/></div>
+              <div class="doctors__name">Иванова Инна</div>
+              <div class="doctors__about">Врач ортодонт, доктор медицинских наук, стаж 12 лет</div>
+              <div class="doctors__action"><a class="btn" href="#">Записаться</a></div>
+            </div>
+            <div class="doctors__item">
+              <div class="doctors__img"><img src="img/doc-2.png" alt=""/></div>
+              <div class="doctors__name">Иванова Инна</div>
+              <div class="doctors__about">Врач ортодонт, доктор медицинских наук, стаж 12 лет</div>
+              <div class="doctors__action"><a class="btn" href="#">Записаться</a></div>
+            </div>
+            <div class="doctors__item">
+              <div class="doctors__img"><img src="img/doc-3.png" alt=""/></div>
+              <div class="doctors__name">Иванова Инна</div>
+              <div class="doctors__about">Врач ортодонт, доктор медицинских наук, стаж 12 лет</div>
+              <div class="doctors__action"><a class="btn" href="#">Записаться</a></div>
+            </div>
+            <div class="doctors__item">
+              <div class="doctors__img"><img src="img/doc-4.png" alt=""/></div>
+              <div class="doctors__name">Иванова Инна</div>
+              <div class="doctors__about">Врач ортодонт, доктор медицинских наук, стаж 12 лет</div>
+              <div class="doctors__action"><a class="btn" href="#">Записаться</a></div>
+            </div>
+            <div class="doctors__item">
+              <div class="doctors__img"><img src="img/doc-5.png" alt=""/></div>
+              <div class="doctors__name">Иванова Инна</div>
+              <div class="doctors__about">Врач ортодонт, доктор медицинских наук, стаж 12 лет</div>
+              <div class="doctors__action"><a class="btn" href="#">Записаться</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end doctors-->
+      <!-- begin review-->
+      <section class="review section" id="review">
+        <div class="container_center">
+          <h2 class="section__title">Отзывы</h2>
+          <div class="review__list">
+            <div class="review__item">
+              <div class="review__box">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+                <div class="review__descr">
+                  <div class="review__title">Отзыв от докторе</div>
+                  <div class="review__name">Петвров Семен Иванович</div>
+                  <div class="review__rate">
+                    <div class="review__label">Рейтинг:</div>
+                    <div class="review__count">5+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review__item">
+              <div class="review__box">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+                <div class="review__descr">
+                  <div class="review__title">Отзыв от докторе</div>
+                  <div class="review__name">Петвров Семен Иванович</div>
+                  <div class="review__rate">
+                    <div class="review__label">Рейтинг:</div>
+                    <div class="review__count">5+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review__item">
+              <div class="review__box">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+                <div class="review__descr">
+                  <div class="review__title">Отзыв от докторе</div>
+                  <div class="review__name">Петвров Семен Иванович</div>
+                  <div class="review__rate">
+                    <div class="review__label">Рейтинг:</div>
+                    <div class="review__count">5+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end review-->
+      <!-- begin promo-->
+      <section class="promo section" id="promo">
+        <div class="container_center">
+          <div class="promo__content">
+            <h2 class="section__title" data-title="Акциии предложения">Акциии предложения</h2>
+            <div class="promo__list">
+              <div class="promo__item">
+                <div class="promo__box">
+                  <div class="promo__img"><img src="img/promo-0.jpg" alt=""/></div>
+                  <div class="promo__descr">
+                    <div class="promo__text">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель</div>
+                    <div class="promo__bottom">
+                      <div class="promo__date">
+                        <label>Акция продлится до:</label>22 марта 2019
+                      </div>
+                      <div class="promo__action"><a class="btn" href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="promo__item">
+                <div class="promo__box">
+                  <div class="promo__img"><img src="img/promo-1.jpg" alt=""/></div>
+                  <div class="promo__descr">
+                    <div class="promo__text">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель</div>
+                    <div class="promo__bottom">
+                      <div class="promo__date">
+                        <label>Акция продлится до:</label>22 марта 2019
+                      </div>
+                      <div class="promo__action"><a class="btn" href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="promo__item">
+                <div class="promo__box">
+                  <div class="promo__img"><img src="img/promo-2.jpg" alt=""/></div>
+                  <div class="promo__descr">
+                    <div class="promo__text">Орбиталь зависима. Амальгама проникает ионообменник. Анод, в согласии с традиционными представлениями, избирательно разъедает растворитель</div>
+                    <div class="promo__bottom">
+                      <div class="promo__date">
+                        <label>Акция продлится до:</label>22 марта 2019
+                      </div>
+                      <div class="promo__action"><a class="btn" href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end promo-->
+    </main>
+    <footer class="footer">
+      <div class="container_center">
+        <div class="footer__top">
+          <div class="footer__left"><a class="logo" href="/"><img src="img/logo-contrast.svg" alt=""/></a></div>
+          <div class="footer__right">
+            <nav class="footer__nav">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="">О нас</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Свидетельства и сертификаты</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Фотогалерея</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Пресса о нас</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Вопрос-ответ</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Доктора</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Статьи</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Технологии</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Заболевания</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Отзывы</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Цены</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Вакансии</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Акции</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copy">Все права защищены. Сафмед – стоматология</div>
+          <div class="footer__soc">
+            <div class="soc">
+              <div class="soc__label">Мы в соц сетях:</div>
+              <div class="soc__list"><a class="soc__item" href=""> <i class="icon-fb"></i></a><a class="soc__item" href=""> <i class="icon-insta"></i></a><a class="soc__item" href=""> <i class="icon-odnoklassniki"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/jquery.event.move.min.js"></script>
+    <script src="js/jquery.twentytwenty.min.js"></script>
+    <script src="js/function.js?0.5"></script>
+  </body>
+</html>

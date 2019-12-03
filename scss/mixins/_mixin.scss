@@ -146,8 +146,10 @@
 // Ширина колонок сетки
 // Использование
 // @include grid-size(2); две колонки
-@mixin grid-size($size, $gup: 20px) {
+@mixin grid($size, $gup: 20px) {
 	margin-left: -$gup;
+	display: flex;
+	flex-wrap: wrap;
 
 	> div {
 		padding-left: $gup;
@@ -156,19 +158,19 @@
 }
 // Ширина колонок сетки при смене ширины окна
 // @include xs-grid-size(2); две колонки при меньше 767 пикселей
-@mixin xs-grid-size($size, $gup: 20px) {
-	@media (max-width: 767px) {
-		@include grid-size($size, $gup);
+@mixin xs-grid($size, $gup: 20px) {
+	@media (min-width: 768px) {
+		@include grid($size, $gup);
 	}
 }
-@mixin sm-grid-size($size, $gup: 20px) {
-	@media (max-grid-width: 991px) {
-		@include size($size, $gup);
+@mixin sm-grid($size, $gup: 20px) {
+	@media (min-width: 992px) {
+		@include grid($size, $gup);
 	}
 }
-@mixin md-grid-size($size, $gup: 20px) {
-	@media (max-width: 1199px) {
-		@include grid-size($size, $gup);
+@mixin md-grid($size, $gup: 20px) {
+	@media (min-width: 1200px) {
+		@include grid($size, $gup);
 	}
 }
 
