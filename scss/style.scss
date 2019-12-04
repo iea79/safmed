@@ -381,7 +381,7 @@ body {
             color: $color_withe;
             text-transform: none;
             font-weight: 400;
-            font-size: 1.4em;
+            font-size: 1.2em;
 
             @media (min-width: 768px) {
                 font-size: 1em;
@@ -450,7 +450,7 @@ body {
 
 .section {
     @media (max-width: 767px) {
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     &__title {
@@ -477,6 +477,7 @@ body {
                 width: 100%;
                 text-align: right;
                 white-space: nowrap;
+                line-height: 1;
             }
         }
     }
@@ -632,9 +633,13 @@ body {
 
 .service {
     &__list {
-        margin: 3.6em -1.7em 0 -0.9em;
+        margin: 3.6em -0.7em 0;
         display: flex;
         flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            margin: 3.6em -1.7em 0 -0.9em;
+        }
     }
 
     &__item {
@@ -993,11 +998,18 @@ body {
 }
 
 .review {
-    padding: 1.7em 0 4.9em;
+    padding: 1.7em 0 1em;
+
+    @media (min-width: 768px) {
+        padding: 1.7em 0 4.9em;
+    }
 
     .section__title {
-        text-align: center;
-        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            text-align: center;
+            margin-bottom: 1em;
+        }
     }
 
     &__list {
@@ -1051,7 +1063,11 @@ body {
 }
 
 .promo {
-    margin-bottom: 5.4em;
+    margin-bottom: 2em;
+
+    @media (min-width: 768px) {
+        margin-bottom: 5.4em;
+    }
 
     .section__title {
         &:before {
@@ -1067,15 +1083,20 @@ body {
 
     &__content {
         @include box();
-        padding: 4.1em 2.4em 5.6em;
+        padding: 4em 0.9em 0;
         margin: 0 -1em;
 
         @media (min-width: 768px) {
+            padding: 4.1em 2.4em 5.6em;
             margin: 0 -2.7em;
         }
     }
 
-    &__item {}
+    &__item {
+        @media (max-width: 767px) {
+            margin-bottom: 1.5em;
+        }
+    }
 
     &__box {
         @include box(0.7em);

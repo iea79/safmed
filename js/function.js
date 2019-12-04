@@ -37,18 +37,12 @@ $(document).ready(function() {
     checkOnResize();
     srollToId();
 
-    $(".compare__img").twentytwenty({
-        no_overlay: true,
-        default_offset_pct: 0.1,
-    });
-
     $('.compare__slider').slick({
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 2,
         prevArrow: '<i class="icon-prev" />',
         nextArrow: '<i class="icon-next" />',
-        draggable: false,
         dots: true,
         responsive: [
             {
@@ -61,6 +55,24 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $(".compare__img").twentytwenty({
+        no_overlay: true,
+        default_offset_pct: 0.1,
+    });
+
+    $(".compare__img").on('mouseenter touchstart', function() {
+        $('.compare__slider').slick('slickSetOption', {
+            draggable: false,
+            swipe: false,
+        })
+    })
+    $(".compare__img").on('mouseleave touchend', function() {
+        $('.compare__slider').slick('slickSetOption', {
+            draggable: true,
+            swipe: true,
+        })
+    })
 
 });
 

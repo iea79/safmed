@@ -1559,7 +1559,7 @@ body {
       color: #ffffff;
       text-transform: none;
       font-weight: 400;
-      font-size: 1.4em; }
+      font-size: 1.2em; }
       @media (min-width: 768px) {
         .footer .navbar__link {
           font-size: 1em; } }
@@ -1624,10 +1624,6 @@ body {
 .home .form {
   margin-top: 2.3em; }
 
-@media (max-width: 767px) {
-  .section {
-    overflow: hidden; } }
-
 .section__title {
   color: #323f53;
   font-family: "Montserrat";
@@ -1652,7 +1648,8 @@ body {
       transform: translateY(-50%);
       width: 100%;
       text-align: right;
-      white-space: nowrap; } }
+      white-space: nowrap;
+      line-height: 1; } }
 
 .section__text {
   font-size: 1.063em;
@@ -1773,7 +1770,7 @@ body {
     margin: 1.8em 0; }
 
 .service__list {
-  margin: 3.6em -1.7em 0 -0.9em;
+  margin: 3.6em -0.7em 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1781,6 +1778,9 @@ body {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    .service__list {
+      margin: 3.6em -1.7em 0 -0.9em; } }
 
 .service__item {
   width: 100%;
@@ -2094,10 +2094,14 @@ body {
         padding: 0.55em 1em; } }
 
 .review {
-  padding: 1.7em 0 4.9em; }
-  .review .section__title {
-    text-align: center;
-    margin-bottom: 1em; }
+  padding: 1.7em 0 1em; }
+  @media (min-width: 768px) {
+    .review {
+      padding: 1.7em 0 4.9em; } }
+  @media (min-width: 768px) {
+    .review .section__title {
+      text-align: center;
+      margin-bottom: 1em; } }
   .review__list {
     margin-left: 0;
     display: -webkit-box;
@@ -2161,7 +2165,10 @@ body {
     font-weight: 700; }
 
 .promo {
-  margin-bottom: 5.4em; }
+  margin-bottom: 2em; }
+  @media (min-width: 768px) {
+    .promo {
+      margin-bottom: 5.4em; } }
   .promo .section__title:before {
     font-size: 2em; }
   .promo__list {
@@ -2195,11 +2202,15 @@ body {
     box-shadow: 0 0.125em 1.5em rgba(19, 41, 98, 0.1), 0 0.063em 0.125em rgba(0, 0, 0, 0.05);
     border-radius: 0.375em;
     background-color: #ffffff;
-    padding: 4.1em 2.4em 5.6em;
+    padding: 4em 0.9em 0;
     margin: 0 -1em; }
     @media (min-width: 768px) {
       .promo__content {
+        padding: 4.1em 2.4em 5.6em;
         margin: 0 -2.7em; } }
+  @media (max-width: 767px) {
+    .promo__item {
+      margin-bottom: 1.5em; } }
   .promo__box {
     -webkit-box-shadow: 0 0.125em 1.5em rgba(19, 41, 98, 0.1), 0 0.063em 0.125em rgba(0, 0, 0, 0.05);
     box-shadow: 0 0.125em 1.5em rgba(19, 41, 98, 0.1), 0 0.063em 0.125em rgba(0, 0, 0, 0.05);
