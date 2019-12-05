@@ -1861,9 +1861,6 @@ body {
 
 .service__action {
   padding: 0 2.7em 2.7em; }
-  @media (min-width: 768px) {
-    .service__action {
-      font-size: 0.75em; } }
   .service__action .btn {
     width: 100%;
     text-transform: inherit; }
@@ -2088,10 +2085,6 @@ body {
   .doctors__action .btn {
     width: 100%;
     text-transform: none; }
-    @media (min-width: 768px) {
-      .doctors__action .btn {
-        font-size: 0.81em;
-        padding: 0.55em 1em; } }
 
 .review {
   padding: 1.7em 0 1em; }
@@ -2252,7 +2245,6 @@ body {
   .promo__action {
     padding-left: 1em; }
     .promo__action .btn {
-      padding: 0.6em 1.3em;
       text-transform: none; }
 
 /*# sourceMappingURL=style.css.map */
