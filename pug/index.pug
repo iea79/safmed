@@ -1,4 +1,4 @@
--var version = '0.7';
+-var version = '0.8';
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -310,7 +310,7 @@ html(lang="en")
                     h2.section__title(data-title="Врачи") Врачи
 
                     .doctors__list
-                        - var doctors = ['','','','',''];
+                        - var doctors = ['','','','','',''];
                         each doc, index in doctors
                             .doctors__item
                                 .doctors__img
@@ -328,7 +328,7 @@ html(lang="en")
                     h2.section__title Отзывы
 
                     .review__list
-                        each item in ['', '', '']
+                        each item in ['', '', '', '']
                             .review__item
                                 .review__box
                                     .video__wrapper.js-youtube#OuOXvavAy1c
@@ -348,7 +348,7 @@ html(lang="en")
                         h2.section__title(data-title="Акциии предложения") Акциии предложения
 
                         .promo__list
-                            each item, i in ['','','']
+                            each item, i in ['','','','']
                                 .promo__item
                                     .promo__box
                                         .promo__img

@@ -28,8 +28,8 @@
 @import 'vendor/twentytwenty';
 @import 'vendor/slick';
 
-@mixin box($rad: 0.375em) {
-    box-shadow: 0 0.125em 1.5em rgba(19, 41, 98, 0.1), 0 0.063em 0.125em rgba(0, 0, 0, 0.05);
+@mixin box($rad: 0.375em, $shadow: 1.5em) {
+    box-shadow: 0 ($shadow / 10) $shadow rgba(19, 41, 98, 0.1), 0 ($shadow / 20) ($shadow / 10) rgba(0, 0, 0, 0.05);
     border-radius: $rad;
     background-color: #ffffff;
 }
@@ -949,7 +949,7 @@ body {
     }
 
     &__item {
-        @include box();
+        @include box(0.7em, 0.7em);
         width: 100%;
         margin: 0.8em;
         text-align: center;
@@ -963,8 +963,7 @@ body {
     &__img {
         width: 10em;
         height: 10em;
-        border-radius: 50%;
-        box-shadow: 0 0.125em 1.5em rgba(19, 41, 98, 0.1), 0 0.063em 0.125em rgba(0, 0, 0, 0.05);
+        @include box(50%, 1.5em);
         overflow: hidden;
         margin: 0 auto 1.6em;
     }
@@ -994,7 +993,91 @@ body {
             }
         }
     }
+}
 
+.slick {
+    &-slide {
+        outline: 0;
+        // margin: 0.8em;
+    }
+
+    &-list {
+        // margin: 0 -.8em;
+    }
+
+    &-current {}
+
+    &-arrow {
+        position: absolute;
+        border: none;
+        font-size: 1.4em;
+        margin-top: -.7em;
+        top: 50%;
+        cursor: pointer;
+        transition: all 0.3s;
+        z-index: 10;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:after,
+        &:before {}
+
+        &:before {}
+
+        &:after {}
+
+        &.icon-next {
+            right: -1.4em;
+        }
+
+        &.icon-prev {
+            left: -1.4em;
+        }
+    }
+
+    &-dots {
+        margin: 0.9em 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            width: 0.8em;
+            height: 0.8em;
+            color: rgba(89, 93, 98, 0.3);
+            border: 0.063em solid;
+            background-color: #ffffff;
+            border-radius: 50%;
+            margin: 0.1em;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &.slick-active {
+                // border: 0.063em solid ;
+                color: #2251e0;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    border: 0.2em solid;
+                    background-color: #2251e0;
+                    border-radius: 50%;
+                }
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
 }
 
 .review {
@@ -1013,16 +1096,28 @@ body {
     }
 
     &__list {
-        @include grid(1, 0);
-        @include xs-grid(3,1.6em);
+        margin: 0 -0.7em;
+        position: relative;
+
+        @media (min-width: 768px) {
+            margin: 0 -1.6em;
+        }
+
+        .slick-list {
+            padding: 0.7em 0;
+        }
     }
 
     &__item {
-        margin-bottom: 1.6em;
+        margin: 0 0.7em;
+
+        @media (min-width: 768px) {
+            margin: 0 1.6em;
+        }
     }
 
     &__box {
-        @include box(0.7em);
+        @include box(0.7em, 0.7em);
         overflow: hidden;
         text-align: center;
     }
@@ -1076,14 +1171,36 @@ body {
     }
 
     &__list {
-        @include grid(1, 0);
-        @include xs-grid(3, 2.7em);
-        margin-top: 2.9em;
+        // @include grid(1, 0);
+        // @include xs-grid(3, 2.7em);
+        margin: 0 -0.7em;
+        position: relative;
+
+        @media (min-width: 768px) {
+            margin: 2.9em -1.6em 0;
+        }
+
+        .slick {
+            &-list {
+                padding: 0.7em 0;
+            }
+
+            &-arrow {
+                &.icon-next {
+                    right: 0;
+                }
+
+                &.icon-prev {
+                    left: 0;
+                }
+            }
+        }
+
     }
 
     &__content {
         @include box();
-        padding: 4em 0.9em 0;
+        padding: 4em 0.9em 2em;
         margin: 0 -1em;
 
         @media (min-width: 768px) {
@@ -1093,13 +1210,19 @@ body {
     }
 
     &__item {
-        @media (max-width: 767px) {
-            margin-bottom: 1.5em;
+        margin: 0 0.7em;
+
+        @media (min-width: 768px) {
+            margin: 0 1.6em;
         }
+
+        // @media (max-width: 767px) {
+        //     margin-bottom: 1.5em;
+        // }
     }
 
     &__box {
-        @include box(0.7em);
+        @include box(0.7em, 0.7em);
         overflow: hidden;
     }
 

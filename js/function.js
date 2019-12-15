@@ -56,6 +56,44 @@ $(document).ready(function() {
         ]
     });
 
+    $('.doctors__list').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow: '<i class="icon-prev" />',
+        nextArrow: '<i class="icon-next" />',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                }
+            }
+        ]
+    });
+
+    $('.review__list, .promo__list').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<i class="icon-prev" />',
+        nextArrow: '<i class="icon-next" />',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                }
+            }
+        ]
+    });
+
     $(".compare__img").twentytwenty({
         no_overlay: true,
         default_offset_pct: 0.1,
